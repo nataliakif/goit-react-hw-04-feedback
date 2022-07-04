@@ -1,0 +1,10 @@
+.Feedback__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.Feedback__button {
+  font-size: 24px;
+  border-radius: 5px;
+  background-color: beige;
+}
