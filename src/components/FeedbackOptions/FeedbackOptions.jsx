@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import styles from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
@@ -26,5 +26,3 @@ FeedbackOptions.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string.isRequired),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
-
-export default FeedbackOptions;
