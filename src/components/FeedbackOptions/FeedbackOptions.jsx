@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
