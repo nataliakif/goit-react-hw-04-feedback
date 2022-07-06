@@ -12,7 +12,6 @@ export default function Feedback() {
     switch (event.target.name) {
       case 'good':
         setGood(prevState => prevState + 1);
-        console.log(good, neutral, bad);
         break;
       case 'neutral':
         setNeutral(prevState => prevState + 1);
@@ -20,11 +19,17 @@ export default function Feedback() {
       case 'bad':
         setBad(prevState => prevState + 1);
         break;
+      default:
+        return new Error(`No statistics yet`);
     }
   };
-  const totalFeedback = good + neutral + bad;
 
-  const positivePercentage = (good / totalFeedback) * 100;
+  const totalFeedback = () => {
+    return good + neutral + bad;
+  };
+  const positivePercentage = () => {
+    return (good / totalFeedback()) * 100;
+  };
 
   return (
     <>
@@ -45,8 +50,8 @@ export default function Feedback() {
             good={good}
             neutral={neutral}
             bad={bad}
-            totalFeedback={totalFeedback}
-            positivePercentage={positivePercentage}
+            totalFeedback={totalFeedback()}
+            positivePercentage={positivePercentage()}
           />
         </Section>
       )}
